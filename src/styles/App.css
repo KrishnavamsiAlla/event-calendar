@@ -1,0 +1,61 @@
+* {
+  user-select: none;
+}
+.app {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 60px); /* Adjust height for the header */
+}
+
+.calendar-container {
+  border-right: 1px solid #ddd;
+  transition: flex 0.2s ease;
+}
+
+.event-list-container {
+  transition: flex 0.2s ease;
+}
+
+.divider {
+  width: 5px;
+  background-color: #ccc;
+  cursor: ew-resize;
+  position: relative;
+}
+
+.divider:hover {
+  background-color: #999;
+}
+
+.faded {
+  opacity: 0.3;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.event-item.conflict-glow {
+  border: 2px solid red;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px red;
+  }
+  100% {
+    box-shadow: 0 0 20px red;
+  }
+}
+
+
+
+
+
